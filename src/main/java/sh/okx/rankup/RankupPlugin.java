@@ -205,7 +205,7 @@ public class RankupPlugin extends JavaPlugin {
     } else {
       permissions = permissionManager.findPermissionProvider();
       if (permissions == null) {
-        getLogger().warning("No permission plugin found! Trying Manual Mode!");
+        getLogger().severe("No permission plugin found! Trying Manual Mode!");
         permissions = permissionManager.permissionOnlyProvider();
       }
     }
