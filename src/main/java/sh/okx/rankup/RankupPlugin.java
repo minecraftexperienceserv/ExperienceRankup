@@ -180,7 +180,13 @@ public class RankupPlugin extends JavaPlugin {
     getCommand("rankup3").setExecutor(new InfoCommand(this, notifier));
     getServer().getPluginManager().registerEvents(new GuiListener(this), this);
     getServer().getPluginManager().registerEvents(
-        new JoinUpdateNotifier(notifier, () -> getConfig().getBoolean("notify-update"), "rankup.notify"), this);
+      new JoinUpdateNotifier(
+        notifier,
+        () -> getConfig().getBoolean("notify-update"),
+        "rankup.notify"
+      ),
+      this
+    );
 
     placeholders = new Placeholders(this);
     placeholders.register();
