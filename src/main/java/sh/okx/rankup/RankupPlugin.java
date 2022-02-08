@@ -262,12 +262,12 @@ public class RankupPlugin extends JavaPlugin {
       sender.sendMessage(
           ChatColor.RED + "Could not load Rankup, check console for more information.");
     } else {
-      getLogger().severe("Failed to load Rankup");
+      getLogger().severe("Rankup failed to load!");
     }
     for (String line : errorMessage.split("\n")) {
       getLogger().severe(line);
     }
-    getLogger().severe("More information can be found in the console log at startup");
+    getLogger().severe("More information can be found in the console log at startup.");
     return true;
   }
 
