@@ -83,6 +83,12 @@ public class PlaceholderRequirement extends ProgressiveRequirement {
   }
 
   @Override
+  public String getSub() {
+    String[] parts = getValueString().split(" ");
+    return parts[0].replace("%", "");
+  }
+
+  @Override
   public boolean check(Player player) {
     return getRemaining(player) <= 0;
   }
